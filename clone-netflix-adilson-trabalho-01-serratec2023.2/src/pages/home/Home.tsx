@@ -1,6 +1,6 @@
 import NavBar from "../../components/navBar/NavBar"
 import React, { useContext } from 'react';
-import { View, Text, Button } from 'react-native'; 
+import { View, Text, Button, ScrollView } from 'react-native'; 
 import { AuthContext } from '../../Context/Context';
 import { useNavigation } from '@react-navigation/native';
 import Style from './Style';
@@ -16,7 +16,7 @@ const Login = () => {
 
   return (
     <>
-     <View style={Style.container}>
+     <ScrollView style={Style.container}>
         {logado ? (
           <View style={Style.containerCarrosseus}>
             <NavBar/>
@@ -33,7 +33,7 @@ const Login = () => {
           <Button color={"#8B0000"} title="Retorna pagina de login" onPress={() => pageLogin()} />
         </View>
         )}
-    </View>
+    </ScrollView>
     </>
   );
 };
