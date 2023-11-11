@@ -18,8 +18,9 @@ const Cadastro = () => {
   const adicionarNovo = () => {
     if(nome !== "" && email !== "" && senha !== ""){
       setListaUsuarios([...listaUsuarios,{id:listaUsuarios.length,nome:nome,senha:senha,email:email}])
-      Alert.alert("Login efetuado com sucesso, retornando a pagina de login")
-      navigation.navigate('home' as never);
+      Alert.alert("cadastro efetuado com sucesso, retornando a pagina de login")
+      navigation.navigate('login' as never);
+      limpar();
     }else{
       Alert.alert("Dados Invalidos")
     }
@@ -41,7 +42,7 @@ const Cadastro = () => {
         {logado ? (
           <View>
             <Text style={Style.text}>Saia para poder fazer o cadastro de um novo usuario</Text>
-            <Button title="Sair" onPress={() => sair()} />
+            <Button color={"#8B0000"} title="Sair" onPress={() => sair()} />
           </View>
         ) : (
           <View style={Style.containerForm}>

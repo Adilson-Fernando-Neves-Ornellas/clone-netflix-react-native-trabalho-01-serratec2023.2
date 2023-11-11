@@ -45,7 +45,7 @@ const Login = () => {
         {logado ? (
           <View>
             <Text style={Style.text}>O usuário já está logado.</Text>
-            <Button title="Sair" onPress={() => sair()} />
+            <Button color={"#8B0000"} title="Sair" onPress={() => sair()} />
           </View>
         ) : (
           <View style={Style.containerForm}>
