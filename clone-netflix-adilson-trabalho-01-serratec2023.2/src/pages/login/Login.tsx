@@ -35,6 +35,10 @@ const Login = () => {
     navigation.navigate('cadastro' as never);
   };
 
+  const voltarHome = () => {
+    navigation.navigate('home' as never);
+  };
+
   const sair = () => {
     setLogado(false)
   };
@@ -45,6 +49,7 @@ const Login = () => {
         {logado ? (
           <View>
             <Text style={Style.text}>O usuário já está logado.</Text>
+            <Button color={"#fff"} title="Voltar a home " onPress={() => voltarHome()} />
             <Button color={"#8B0000"} title="Sair" onPress={() => sair()} />
           </View>
         ) : (
